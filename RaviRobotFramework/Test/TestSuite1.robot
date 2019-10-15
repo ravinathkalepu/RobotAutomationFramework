@@ -34,6 +34,9 @@ thirdSeleniumTestCase
     
 fourthSeleniumTestCase
     Log    Hi from fourthtestcase
+    
+FirfthSeleniumTestCase
+    Log    Hi from fifthtestcase
 *** Variables ***
 ${URL}    https://www.one-key.gov.on.ca/iaalogin/IAALogin.jsp
 @{Credentials}    pvt_client3    Test123$
