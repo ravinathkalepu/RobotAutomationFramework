@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.4 on win32)" generated="20191015 11:07:36.739" rpa="false">
+<suite id="s1" name="TestSuite1" source="C:\Users\ravi\eclipse-workspace\RaviRobotFramework\Test\TestSuite1.robot">
+<kw name="Log" library="BuiltIn" type="setup">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>I am from test Suite Setup</arg>
+</arguments>
+<msg timestamp="20191015 11:07:37.127" level="INFO">I am from test Suite Setup</msg>
+<status status="PASS" starttime="20191015 11:07:37.127" endtime="20191015 11:07:37.127"></status>
+</kw>
+<test id="s1-t1" name="MyFristTestCase">
+<kw name="Log" library="BuiltIn" type="setup">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>I am from test case setup</arg>
+</arguments>
+<msg timestamp="20191015 11:07:37.127" level="INFO">I am from test case setup</msg>
+<status status="PASS" starttime="20191015 11:07:37.127" endtime="20191015 11:07:37.131"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Hello World...</arg>
+</arguments>
+<msg timestamp="20191015 11:07:37.131" level="INFO">Hello World...</msg>
+<status status="PASS" starttime="20191015 11:07:37.131" endtime="20191015 11:07:37.131"></status>
+</kw>
+<kw name="Log" library="BuiltIn" type="teardown">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>I am from test case Teardown</arg>
+</arguments>
+<msg timestamp="20191015 11:07:37.131" level="INFO">I am from test case Teardown</msg>
+<status status="PASS" starttime="20191015 11:07:37.131" endtime="20191015 11:07:37.131"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" starttime="20191015 11:07:37.127" endtime="20191015 11:07:37.131" critical="yes"></status>
+</test>
+<kw name="Log" library="BuiltIn" type="teardown">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>I am from test Suite Teatdown</arg>
+</arguments>
+<msg timestamp="20191015 11:07:37.139" level="INFO">I am from test Suite Teatdown</msg>
+<status status="PASS" starttime="20191015 11:07:37.135" endtime="20191015 11:07:37.139"></status>
+</kw>
+<status status="PASS" starttime="20191015 11:07:36.743" endtime="20191015 11:07:37.139"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="TestSuite1">TestSuite1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
