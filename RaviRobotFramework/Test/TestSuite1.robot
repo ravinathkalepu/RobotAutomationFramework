@@ -1,6 +1,8 @@
 
 *** Settings ***
-Library  SeleniumLibrary  
+Library  SeleniumLibrary 
+Variables    ../Test/Variables/variables.py
+Resource    Resource/keywords.resource
 Suite Setup    Log    I am from test Suite Setup
 Suite Teardown    Log    I am from test Suite Teatdown
 Test Setup    Log    I am from test case setup
@@ -16,15 +18,13 @@ MyFristTestCase
 FirstSeleniumTestCase
      Log    Hi    
      Open Browser  ${URL}    chrome
-     LoginKW
-     Click Element    link=ServiceOntario Account
-     Click Element    link=Environmental Permissions
-     Maximize Browser Window
-     Click Button    xpath = //button[@class='btn primary pull-right']
-     Sleep    15    
-     Switch Window    new
-     Click Element     xpath = //a[@id="My Services"]/span[@class="menulink"]
-     Close All Browsers
+     LogintoPortal
+     LandonCAMS
+     Click Element    xpath=//*[@id="startServicesLinkId"]  
+     Click Element    xpath=//*[@id="startServices"]/div[1]/div/div[2]/div[2]/div/a
+     #Click Element    xpath=/html/body/div[8]/div/div/div[3]/button[2]
+     Select Checkbox    xpath=//*[@id="maincontent"]/selectactivity/div/div/div/div/div/div/fieldset/div/div[2]/div/label/span/span[3]/span
+     #Close All Browsers
      log    test successfully completed by %{username} on %{os}
      
 SecondSeleniumTestCase
@@ -37,16 +37,12 @@ fourthSeleniumTestCase
     
 FirfthSeleniumTestCase
     Log    Hi from fifthtestcase
-*** Variables ***
-${URL}    https://www.one-key.gov.on.ca/iaalogin/IAALogin.jsp
-@{Credentials}    pvt_client3    Test123$
+#*** Variables ***
+#${URL}    https://www.one-key.gov.on.ca/iaalogin/IAALogin.jsp
+#@{Credentials}    pvt_client3    Test123$
 
-*** Keywords ***
-LoginKW
-    Input Text    name = ldap_user    @{Credentials}[0]
-     Input Password    name = ldap_password    @{Credentials}[1]
-     Click Button    name = Login
-       
+
+     
      
      
 
